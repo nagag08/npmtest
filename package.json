@@ -34,7 +34,7 @@
     "express-validator": "^6.5.0",
     "helmet": "^3.23.0",
     "mongodb": "^3.5.8",
-    "mongoose": "^5.9.17",
+    "mongoose": "^5.13.20",
     "morgan": "^1.10.0",
     "multer": "^1.4.2",
     "mysql2": "^2.1.0",
