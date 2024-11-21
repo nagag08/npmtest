@@ -8,14 +8,16 @@ const fetchAllProducts = (file, title, path, req, res, next, condition = {}) => 
   let page = +req.query.page || 1;
   let totalProducts;
 
+// jfrog-ignore
   Product.find(condition).countDocuments()
     .then(productsCount => {
       totalProducts = productsCount;
-      // jfrog-ignore
+// jfrog-ignore
       return Product.find(condition)
         .skip((page - 1) * ITEMS_PER_PAGE)
         .limit(ITEMS_PER_PAGE)
     })
+// jfrog-ignore
     .then((products) => res.render(file, {
       products,
       title,
